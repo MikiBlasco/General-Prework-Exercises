@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  <link rel="stylesheet" href="olympicsStyle.css">  
+</head>
+<h1>Object Exercise</h1>
+<body>
+
+    
+
+    <ul>
+    </ul>
+
+    <div>
+
+    </div>
+
+    <ol>
+
+    </ol>
+
+    <script>
+
+let listElement = document.querySelector("ul")
+let divElement = document.querySelector("div")
+let olElement = document.querySelector("ol")
+
+let product = {
+  name: 'headphones',
+  price: 120,
+  doesItWork: false,
+  previousOwner: 'Bob'
+};
+
+for (let i in product) {
+    console.log(`key: ${i}, prop: ${product[i]}`)
+}
+
+ delete product.previousOwner
+ product.doesItWork = true
+
+
+ if (product.price > 100) {
+     product.discountPercentage = 10
+     product.price *= -((10/100)-1)
+     console.log(product.price)
+ }
+
+ if ("discountPercentage" in product) {
+     console.log(`we got some ${product.name} on sale for just ${product.price}, that is ${product.discountPercentage}$ off!`)
+
+ }
+
+
+ console.log(product)
+
+
+
+    </script>
+</body>
+</html>
